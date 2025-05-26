@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block title %}Контакты | MyToolBox{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <h1 class="display-4 mb-4 text-center">
+                <i class="bi bi-chat-left-text-fill text-primary"></i> Контакты
+            </h1>
+            
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                    <p class="lead">
+                        Хотите предложить новый бесполезный инструмент или сообщить, что что-то сломалось?
+                        Мы (то есть я) всегда рад фидбэку!
+                    </p>
+                </div>
+            </div>
+
+            <div class="alert alert-info">
+                <i class="bi bi-info-circle"></i> 
+                <strong>Важно:</strong> На самом деле это мои личные контакты, но представьте, что это служба поддержки целой компании.
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 border-primary">
+                        <div class="card-header bg-primary text-white">
+                            <i class="bi bi-github"></i> GitHub
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Исходный код</h5>
+                            <p class="card-text">
+                                Тут вы можете найти код этого "великолепного" проекта.
+                                Предупреждаю: не смотрите слишком внимательно, там страшные вещи.
+                            </p>
+                            <a href="https://github.com/Maxim-hub296/MyToolBox"
+                               class="btn btn-outline-primary" 
+                               target="_blank">
+                                Перейти на GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 border-primary">
+                        <div class="card-header bg-primary text-white">
+                            <i class="bi bi-telegram"></i> Telegram
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Написать мне</h5>
+                            <p class="card-text">
+                                Если хотите пообщаться - пишите в Telegram.
+                                Отвечаю, когда кофе закончится и придется встать из-за компьютера.
+                            </p>
+                            <a href="https://t.me/Wanderer2754" 
+                               class="btn btn-outline-primary" 
+                               target="_blank">
+                                Написать в Telegram
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mt-4 border-warning">
+                <div class="card-header bg-warning text-dark">
+                    <i class="bi bi-exclamation-triangle"></i> Важное предупреждение
+                </div>
+                <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                        <p>"Я не несу ответственности за то, что вы увидите в моем коде. Смотрите на свой страх и риск!"</p>
+                        <footer class="blockquote-footer">Наш юрист (которого не существует)</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
