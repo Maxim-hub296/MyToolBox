@@ -5,3 +5,6 @@ class AboutView(TemplateView):
 
 class ContactView(TemplateView):
     template_name = 'info/contact.html'
+
+class CoffeeView(TemplateView):
+    template_name = "info/coffee.html"

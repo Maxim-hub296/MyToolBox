@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block title %}418 I'm a teapot | MyToolBox{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+            <div class="error-header mb-5">
+                <i class="bi bi-cup-hot-fill display-1 text-danger"></i>
+                <h1 class="display-3 mt-3">418 I'm a Teapot</h1>
+                <p class="lead">Сервер отказывается варить кофе, потому что он — чайник</p>
+            </div>
+
+            <div class="card border-danger mb-4">
+                <div class="card-header bg-danger text-white">
+                    <i class="bi bi-exclamation-octagon"></i> Объяснение ошибки
+                </div>
+                <div class="card-body">
+                    <p>Это реальный HTTP-статус из April Fools' joke (<a href="https://tools.ietf.org/html/rfc2324" target="_blank">RFC 2324</a>), 
+                    который означает, что сервер отказывается заваривать кофе, потому что он чайник (в прямом смысле).</p>
+                    
+                    <div class="alert alert-info mt-3">
+                        <i class="bi bi-lightbulb"></i> 
+                        <strong>Факт:</strong> В 1998 году это была шутка, но сейчас некоторые IoT-чайники действительно возвращают этот статус!
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header bg-warning">
+                            <i class="bi bi-emoji-frown"></i> Что случилось?
+                        </div>
+                        <div class="card-body">
+                            <p>Вы либо:</p>
+                            <ul>
+                                <li>Пытались заварить кофе через чайник</li>
+                                <li>Нашли нашу пасхалку</li>
+                                <li>Случайно попали сюда</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header bg-success text-white">
+                            <i class="bi bi-emoji-smile"></i> Что делать?
+                        </div>
+                        <div class="card-body">
+                            <ol>
+                                <li>Примите свою судьбу</li>
+                                <li>Выпейте чаю вместо кофе</li>
+                                <li>Вернитесь <a href="/">на главную</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mt-4 border-primary">
+                <div class="card-header bg-primary text-white">
+                    <i class="bi bi-patch-question"></i> Настоящая причина
+                </div>
+                <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                        <p>"Мы добавили эту страницу, потому что могли. Как и 90% функционала этого сайта."</p>
+                        <footer class="blockquote-footer">Разработчик, который не спал 3 ночи</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
