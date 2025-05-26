@@ -8,3 +8,6 @@ class ContactView(TemplateView):
 
 class CoffeeView(TemplateView):
     template_name = "info/coffee.html"
+
+class ThanksView(TemplateView):
+    template_name = "info/thanks.html"
