@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}О нас | MyToolBox{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <h1 class="display-4 mb-4 text-center">
+                <i class="bi bi-people-fill text-primary"></i> О нашем проекте
+            </h1>
+            
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                    <p class="lead">
+                        MyToolBox — это коллекция бесполезных полезных инструментов, которые вы никогда не искали, 
+                        но теперь не сможете жить без них!
+                    </p>
+                </div>
+            </div>
+
+            <div class="alert alert-warning">
+                <i class="bi bi-lightbulb"></i> 
+                <strong>Факт:</strong> 87% нашего кода состоит из StackOverflow-копипасты. Остальные 13% — это пробелы.
+            </div>
+
+            <h2 class="mt-5"><i class="bi bi-code-square"></i> Наша миссия</h2>
+            <p>
+                Мы упорно трудились, чтобы создать инструменты, которые:
+            </p>
+            <ul class="list-group mb-4">
+                <li class="list-group-item">Делают то, что можно сделать вручную за 2 секунды</li>
+                <li class="list-group-item">Требуют 5 кликов вместо одного</li>
+                <li class="list-group-item">Но зато выглядят <i class="bi bi-star-fill text-warning"></i> круто!</li>
+            </ul>
+
+
+
+            <div class="card mt-4 border-primary">
+                <div class="card-header bg-primary text-white">
+                    <i class="bi bi-patch-question"></i> Почему мы?
+                </div>
+                <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                        <p>"Потому что все остальные сайты просят email для генерации случайного числа, а мы — нет!"</p>
+                        <footer class="blockquote-footer">Наш единственный довольный пользователь</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
