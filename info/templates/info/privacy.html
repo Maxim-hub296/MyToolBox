@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+
+{% block title %}Политика конфиденциальности | MyToolBox{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <h1 class="display-4 mb-4 text-center">
+                <i class="bi bi-shield-lock-fill text-primary"></i> Официальнейшая Политика Конфиденциальности
+            </h1>
+            
+            <div class="alert alert-danger">
+                <i class="bi bi-exclamation-triangle-fill"></i>
+                <strong>Внимание!</strong> Этот документ написан с максимальной серьезностью (нет).
+            </div>
+
+            <div class="card border-warning mb-4">
+                <div class="card-header bg-warning text-dark">
+                    <i class="bi bi-emoji-laughing"></i> Раздел 1. Какие данные мы собираем
+                </div>
+                <div class="card-body">
+                    <p>Абсолютно никакие. Серьёзно.</p>
+                    <ul>
+                        <li>Нет куки (печеньки мы тоже не предлагаем)</li>
+                        <li>Нет регистрации (мы вам не доверяем)</li>
+                        <li>Нет аналитики (нам лень это смотреть)</li>
+                    </ul>
+                    <p class="mb-0">Если вы где-то видите форму для ввода данных — это глюк матрицы.</p>
+                </div>
+            </div>
+
+            <div class="card border-info mb-4">
+                <div class="card-header bg-info text-white">
+                    <i class="bi bi-people"></i> Раздел 2. Кому мы продаём ваши данные
+                </div>
+                <div class="card-body">
+                    <p>Мы бы с радостью продали ваши данные, но:</p>
+                    <div class="text-center">
+                        <img src="https://placehold.co/400x100?text=Нет+данных — нет+проблем" 
+                             alt="Нет данных" 
+                             class="img-fluid rounded my-2">
+                    </div>
+                    <p class="mt-3">
+                        <i class="bi bi-arrow-right"></i> Поэтому мы продаём только воображаемые данные вымышленным корпорациям 
+                        по цене 0 рублей за терабайт. Отличная сделка!
+                    </p>
+                </div>
+            </div>
+
+            <div class="card border-success mb-4">
+                <div class="card-header bg-success text-white">
+                    <i class="bi bi-shield-check"></i> Раздел 3. Как мы защищаем ваши несуществующие данные
+                </div>
+                <div class="card-body">
+                    <p>Наша система безопасности включает:</p>
+                    <ol>
+                        <li>Сторожевого динозавра (пластикового)</li>
+                        <li>Секретный пароль "12345" на Excel-файле с пользователями (которого нет)</li>
+                        <li>Наивную надежду, что никто не будет атаковать этот сайт</li>
+                    </ol>
+                    <div class="alert alert-light">
+                        <i class="bi bi-lightbulb"></i> 
+                        <strong>Совет:</strong> Если вы всё же переживаете — можете завернуть устройство в фольгу 
+                        перед посещением сайта. Для надёжности.
+                    </div>
+                </div>
+            </div>
+
+            <div class="card border-dark">
+                <div class="card-header bg-dark text-white">
+                    <i class="bi bi-file-earmark-medical"></i> Раздел 4. Юридическая вода
+                </div>
+                <div class="card-body">
+                    <p>Настоящим мы официально уведомляем, что:</p>
+                    <ul>
+                        <li>Этот документ — шутка (но вы ведь уже догадались)</li>
+                        <li>Сайт действительно не собирает данные (это не шутка)</li>
+                        <li>Наши юристы — котик и фикус (и то фикус уволился)</li>
+                    </ul>
+                    <blockquote class="blockquote mt-3 mb-0">
+                        <p>"Если вы прочитали этот текст до конца — у вас слишком много свободного времени. Может, займётесь полезными делами?"</p>
+                        <footer class="blockquote-footer">Наш HR-отдел (он же я)</footer>
+                    </blockquote>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="/" class="btn btn-primary btn-lg">
+                    <i class="bi bi-house-door"></i> Вернуться к чему-то полезному
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

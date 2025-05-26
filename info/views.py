@@ -11,3 +11,6 @@ class CoffeeView(TemplateView):
 
 class ThanksView(TemplateView):
     template_name = "info/thanks.html"
+
+class PrivacyView(TemplateView):
+    template_name = "info/privacy.html"
