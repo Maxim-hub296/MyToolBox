@@ -19,9 +19,9 @@ def string_analyses(string: str) -> list[str]:
 
 def convert_register(string:str, choice: str) -> str:
     """Конвертирует строку в другой регистр"""
-    convertor = {"lower": string.lower(),
-                 "upper": string.upper(),
-                 "start_with_up": string.capitalize()}
+    convertor = {"low": string.lower(),
+                 "up": string.upper(),
+                 "capitalize": string.capitalize()}
 
     return convertor[choice]
 

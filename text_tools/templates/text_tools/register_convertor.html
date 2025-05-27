@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block title %}Конвертер регистра | MyToolBox{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            <div class="card shadow-sm border-primary">
+                <div class="card-header bg-primary text-white">
+                    <i class="bi bi-text-case me-2"></i>Конвертер регистра
+                </div>
+                <div class="card-body">
+                    <form method="post">
+                        {% csrf_token %}
+                        
+                        <div class="mb-4">
+                            <label for="text-input" class="form-label h5">
+                                <i class="bi bi-input-cursor-text me-2"></i>Введите строку
+                            </label>
+                            <input type="text" 
+                                   class="form-control form-control-lg" 
+                                   id="text-input" 
+                                   name="text"
+                                   placeholder="Например: Привет Мир">
+                        </div>
+
+                        <fieldset class="mb-4">
+                            <legend class="h5">
+                                <i class="bi bi-arrow-repeat me-2"></i>Выберите регистр:
+                            </legend>
+                            
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" id="up" name="register" value="up">
+                                <label class="form-check-label" for="up">
+                                    <i class="bi bi-type-bold me-1"></i> ВЕРХНИЙ РЕГИСТР
+                                </label>
+                            </div>
+                            
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" id="low" name="register" value="low">
+                                <label class="form-check-label" for="low">
+                                    <i class="bi bi-type me-1"></i> нижний регистр
+                                </label>
+                            </div>
+                            
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" id="capitalize" name="register" value="capitalize">
+                                <label class="form-check-label" for="capitalize">
+                                    <i class="bi bi-type-h1 me-1"></i> Первая буква заглавная
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="bi bi-arrow-right-circle me-2"></i>Конвертировать
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
