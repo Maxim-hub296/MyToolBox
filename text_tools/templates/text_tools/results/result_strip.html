@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Результат | MyToolBox{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-sm border-success">
+                <div class="card-header bg-success text-white">
+                    <i class="bi bi-check-circle me-2"></i>Результат обработки
+                </div>
+                <div class="card-body text-center py-5">
+                    <div class="display-4 mb-4 p-4 bg-light rounded">
+                        {{ item }}
+                    </div>
+                    <div class="text-muted mb-3">
+                        <i class="bi bi-info-circle"></i>
+                        Все лишние пробелы были удалены
+                    </div>
+                    <a href="javascript:history.back()" class="btn btn-primary">
+                        <i class="bi bi-arrow-left"></i> Вернуться назад
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
