@@ -9,4 +9,4 @@ class AnalysesView(View):
     def post(self, request):
         string = request.POST.get('text', '')
         result = string_analyses(string)
-        return render(request, 'text_tools/result.html', {"result":result})
+        return render(request, 'text_tools/results/result_analyses.html', {"result":result})
