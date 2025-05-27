@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}Хэширование | MyToolBox{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            <div class="card shadow-sm border-primary">
+                <div class="card-header bg-primary text-white">
+                    <i class="bi bi-hash me-2"></i>Генератор хэшей
+                </div>
+                <div class="card-body">
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="mb-4">
+                            <label class="form-label h5">
+                                <i class="bi bi-input-cursor-text me-2"></i>Введите текст:
+                            </label>
+                            <input type="text" 
+                                   class="form-control form-control-lg" 
+                                   name="text"
+                                   placeholder="Текст для хэширования">
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="bi bi-file-lock2 me-2"></i>Хэшировать
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
