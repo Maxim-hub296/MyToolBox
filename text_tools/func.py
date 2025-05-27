@@ -12,7 +12,7 @@ def string_analyses(string: str) -> list[str]:
             consonants_cnt += 1
 
     string_length = f"Длина строки: {len(string)}"
-    words_cnt = f"Количество слов: {len(string.split(""))}"
+    words_cnt = f"Количество слов: {len(string.split())}"
     vowels_res = f"Количество гласных: {vowels_cnt}"
     consonants_res = f"Количество согласных: {consonants_cnt}"
     return [string_length, words_cnt, vowels_res, consonants_res]
