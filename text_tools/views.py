@@ -1,28 +1,25 @@
 from django.shortcuts import render
 from django.views import View
+from django.views.generic import TemplateView
 from .func import *
 
 
 # Create your views here.
-class AnalysesView(View):
-    def get(self, request):
-        return render(request, "text_tools/analyses.html")
+# class AnalysesView(View):
+#     def get(self, request):
+#         return render(request, "text_tools/analyses.html")
+#
+#     def post(self, request):
+#         string = request.POST.get('text', '')
+#         result = string_analyses(string)
+#         return render(request, 'text_tools/results/result_analyses.html', {"result": result})
 
-    def post(self, request):
-        string = request.POST.get('text', '')
-        result = string_analyses(string)
-        return render(request, 'text_tools/results/result_analyses.html', {"result": result})
 
+class AnalysesView(TemplateView):
+    template_name = "text_tools/analyses.html"
 
-class RegisterConvertorView(View):
-    def get(self, request):
-        return render(request, "text_tools/register_convertor.html")
-
-    def post(self, request):
-        string = request.POST.get("text", "")
-        choice = request.POST.get("register", "")
-        result = convert_register(string, choice)
-        return render(request, "text_tools/results/result_convertor.html", {"item": result})
+class RegisterConvertorView(TemplateView):
+    template_name = "text_tools/register_convertor.html"
 
 
 class StringStripView(View):

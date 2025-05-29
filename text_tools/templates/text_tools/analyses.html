@@ -1,19 +1,26 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
 <div class="container mt-5">
     <h2>Анализ строки</h2>
-    <form method="post">
+    <form method="post" name="stringForm" onsubmit="fn(event)">
         {% csrf_token %}
         <div class="mb-3">
             <label for="text-input" class="form-label">Введите текст:</label>
             <input type="text" 
-                   class="form-control" 
-                   id="text-input" 
+                   class="form-control"
+                   id="text-input"
                    name="text"
                    placeholder="Например: Hello World">
         </div>
         <button type="submit" class="btn btn-primary">Анализировать</button>
     </form>
 </div>
+
+
+{% endblock %}
+
+
+{% block extra_js %}
+    <script src="{% static 'text_tools/js/string-stats.js' %}"></script>
 {% endblock %}
