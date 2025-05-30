@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include("info.urls")),
     path("text_tools/", include("text_tools.urls")),
+    path("random_tools/", include("random_tools.urls"))
 
 ]

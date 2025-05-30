@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Генератор случайных чисел | MyToolBox{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            <div class="card shadow-sm border-primary">
+                <div class="card-header bg-primary text-white">
+                    <i class="bi bi-dice-5 me-2"></i>Генератор случайных чисел
+                </div>
+                <div class="card-body">
+                    <form name="numsForm" method="post">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="minNumber" class="form-label">Минимальное число:</label>
+                            <input type="number" class="form-control" id="minNumber" name="minNumber" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="maxNumber" class="form-label">Максимальное число:</label>
+                            <input type="number" class="form-control" id="maxNumber" name="maxNumber" required>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="bi bi-arrow-repeat me-2"></i>Сгенерировать
+                            </button>
+                        </div>
+                    </form>
+                    <div id="result" class="mt-4"></div> <!-- Контейнер для результатов -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'random_tools/js/rand_num.js' %}"></script>
+{% endblock %}
