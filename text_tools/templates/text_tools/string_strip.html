@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}Удаление пробелов | MyToolBox{% endblock %}
 
@@ -11,7 +12,7 @@
                     <i class="bi bi-text-paragraph me-2"></i>Удаление лишних пробелов
                 </div>
                 <div class="card-body">
-                    <form method="post">
+                    <form method="post" name="stringForm">
                         {% csrf_token %}
                         <div class="mb-4">
                             <label for="text-input" class="form-label h5">
@@ -34,4 +35,7 @@
         </div>
     </div>
 </div>
+    <script src="{% static 'text_tools/js/string-strip.js' %}"></script>
+
+
 {% endblock %}

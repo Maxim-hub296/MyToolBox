@@ -8,12 +8,13 @@ function calculateStringStats(str) {
     for(const char of str.toLowerCase()) {
         if (vowels.includes(char)) {
             vowels_cnt += 1;
-        } else if (char.match(/[a-zа-я]/i)) {
+        } else if (char.match(/[a-zа-я]/)) {  // Убрали флаг 'i'
             consonants_cnt += 1;
         }
     }
 
-    const word_count = str.split(" ").filter(word => word.length > 0).length;
+    // Более точный подсчет слов
+    const word_count = str.trim() === '' ? 0 : str.trim().split(/\s+/).length;
 
     return {
         length: str_len,
@@ -28,18 +29,15 @@ function initStringStatsForm() {
 
     if (form) {
         form.addEventListener('submit', function(event) {
-            event.preventDefault();
+            event.preventDefault();  // Ключевая строка!
+
+            console.log("Form submission intercepted");
 
             const str = form.string.value;
             const stats = calculateStringStats(str);
 
-            let resultDiv = document.getElementById("result");
-            if (!resultDiv) {
-                resultDiv = document.createElement("div");
-                resultDiv.id = "result";
-                form.parentNode.insertBefore(resultDiv, form.nextSibling);
-            }
-
+            const resultDiv = document.getElementById("result");
+            resultDiv.className = "mt-4 p-3 bg-light rounded";
             resultDiv.innerHTML = `
                 <h4>Результат:</h4>
                 <p>Длина строки: ${stats.length}</p>
@@ -47,11 +45,19 @@ function initStringStatsForm() {
                 <p>Количество гласных букв: ${stats.vowels}</p>
                 <p>Количество согласных букв: ${stats.consonants}</p>
             `;
-
             form.reset();
+
+            // Для дебага - проверьте консоль браузера
+            console.log("Results displayed", stats);
         });
+    } else {
+        console.error("Form not found!");
     }
 }
 
-// Инициализация при загрузке документа
-document.addEventListener('DOMContentLoaded', initStringStatsForm);
+// Инициализация
+if (document.readyState !== 'loading') {
+    initStringStatsForm();
+} else {
+    document.addEventListener('DOMContentLoaded', initStringStatsForm);
+}

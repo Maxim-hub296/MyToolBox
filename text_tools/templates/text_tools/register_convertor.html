@@ -1,15 +1,16 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}Конвертер регистра | MyToolBox{% endblock %}
 
 {% block content %}
 <div class="container mt-5">
-    <form name="stringForm" method="post" onsubmit="fn(event)">
+    <form name="stringForm" method="post">
         {% csrf_token %}
 
         <div class="mb-3">
-            <label class="form-label">Введите текст:</label>
-            <input type="text" name="string" class="form-control" required>
+            <label for="text-input" class="form-label">Введите текст:</label>
+            <input id="text-input" type="text" name="string" class="form-control" required>
         </div>
 
         <div class="mb-3">
@@ -30,36 +31,6 @@
         <button type="submit" class="btn btn-primary">Конвертировать</button>
     </form>
 </div>
+    <script src="{% static 'text_tools/js/register-convertor.js' %}"></script>
 
-<script>
-function fn(event) {
-    event.preventDefault();
-    const form = event.target;
-    let str = form.string.value;
-    const choice = form.register.value;
-
-    switch(choice) {
-        case "up": str = str.toUpperCase(); break;
-        case "low": str = str.toLowerCase(); break;
-        case "capitalize":
-            str = str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
-            break;
-    }
-
-    let resultDiv = document.getElementById("result");
-    if (!resultDiv) {
-        resultDiv = document.createElement("div");
-        resultDiv.id = "result";
-        resultDiv.className = "mt-4 p-3 bg-light rounded";
-        form.parentNode.insertBefore(resultDiv, form.nextSibling);
-    }
-
-    resultDiv.innerHTML = `
-        <h4>Результат:</h4>
-        <p class="mb-0">${str}</p>
-    `;
-
-    form.reset();
-}
-</script>
 {% endblock %}
