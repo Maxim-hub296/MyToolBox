@@ -4,3 +4,6 @@ from django.views.generic import TemplateView
 
 class RandNumView(TemplateView):
     template_name = "random_tools/rand_num.html"
+
+class PasswordView(TemplateView):
+    template_name = "random_tools/password.html"

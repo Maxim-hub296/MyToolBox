@@ -34,7 +34,6 @@ INSTALLED_APPS = [
     "info.apps.InfoConfig",
     "random_tools.apps.RandomToolsConfig",
     "text_tools.apps.TextToolsConfig",
-    "time_tools.apps.TimeToolsConfig",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
